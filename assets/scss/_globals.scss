@@ -1,0 +1,220 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  overflow-x: hidden;
+
+  @include breakpoint-up(large) {
+  }
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+// Text
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  line-height: 1.15;
+  margin-top: 0px;
+  &.heading {
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+h1 {
+  margin-bottom: 21px;
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  @include breakpoint-up(large) {
+    font-size: 68px;
+    margin-bottom: 24px;
+  }
+}
+
+h2 {
+  margin-bottom: 1.5625rem;
+  font-size: 25px;
+  letter-spacing: -1px;
+  color: $Very-Dark-Violet;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 2.25rem;
+    font-size: 38px;
+  }
+}
+
+h3 {
+  font-size: 23px;
+  color: $Very-Dark-Violet;
+  @include breakpoint-up(large) {
+    font-size: 29px;
+  }
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 2.25rem;
+  text-align: center;
+  color: $par;
+  @include breakpoint-up(large) {
+    font-size: 16px;
+  }
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+// Spacing
+.container {
+  max-width: 1111px;
+  margin: 0 auto;
+
+  &--pall {
+    padding-top: 22px;
+    padding-right: 24px;
+    padding-bottom: 22px;
+    padding-left: 24px;
+
+    @include breakpoint-up(large) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  &--py {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @include breakpoint-up(large) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  &--px {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  &--pt {
+    padding-top: 24px;
+
+    @include breakpoint-up(large) {
+      padding-top: 20px;
+    }
+  }
+  &--pr {
+    padding-right: 24px;
+    @include breakpoint-up(large) {
+      padding-right: 165px;
+    }
+  }
+  &--pb {
+    padding-bottom: 24px;
+
+    @include breakpoint-up(large) {
+      padding-bottom: 59px;
+    }
+  }
+  &--pl {
+    padding-left: 24px;
+    @include breakpoint-up(large) {
+      padding-left: 165px;
+    }
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Buttons
+button,
+.button {
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  padding: 8.5px 23px;
+  color: $Grayish-Blue;
+  border: 2px solid black;
+  transition: 0.15s ease-in-out;
+  text-transform: uppercase;
+  font-family: "Karla";
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+  &.outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+// hellper
+.has-fade {
+  visibility: hidden;
+}
+
+.close {
+  display: none;
+}
+.show {
+  display: block;
+}

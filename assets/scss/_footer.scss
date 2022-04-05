@@ -1,0 +1,112 @@
+.footer {
+  a {
+    transition: 0.15s ease-in-out;
+  }
+  padding-top: 87px;
+  padding-bottom: 87px;
+  background-color: $Very-Light-Gray;
+  background-image: url(./images/bg-pattern-footer-mobile.svg);
+  background-position: left top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @include breakpoint-up(large) {
+    max-height: 393px;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    background-image: none;
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-position: left left;
+    width: 100%;
+    height: 100%;
+    background-size: 35%;
+    background-repeat: no-repeat;
+  }
+  &__top {
+    border-bottom: 1px solid $par;
+
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__logo {
+    text-align: center;
+    margin-bottom: 29px;
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+    }
+  }
+  &__social {
+    a {
+      svg path {
+        transition: 0.15s ease-in-out;
+      }
+      &:hover svg path {
+        fill: $Very-Dark-Violet;
+      }
+    }
+    margin-bottom: 38px;
+    @include breakpoint-up(large) {
+      margin-bottom: 28px;
+    }
+    text-align: center;
+    a {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+  &__grid {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-area: "col1 col2 col3 col4";
+      justify-content: start;
+      gap: 1rem;
+    }
+    &.col1 {
+      grid-area: col1;
+    }
+    &.col2 {
+      grid-area: col2;
+    }
+    &.col3 {
+      grid-area: col3;
+    }
+    &.col4 {
+      grid-area: col4;
+    }
+  }
+  &__links {
+    a {
+      &:not(:first-of-type) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      @include breakpoint-up(large) {
+        text-align: left;
+        margin-bottom: 17px;
+      }
+      letter-spacing: 1px;
+      &:first-of-type {
+        color: $par;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @include breakpoint-up(large) {
+          margin-top: 42px;
+          margin-bottom: 35px;
+        }
+      }
+      margin-bottom: 20px;
+      color: $Very-Dark-Violet;
+      display: block;
+      text-align: center;
+    }
+  }
+}

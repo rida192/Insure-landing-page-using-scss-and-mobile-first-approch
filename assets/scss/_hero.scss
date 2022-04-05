@@ -1,0 +1,118 @@
+.hero {
+  background-color: $Dark-Violet;
+  position: relative;
+  @include breakpoint-up(large) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 176px;
+  }
+  &__image {
+    order: 2;
+    width: 100%;
+    position: relative;
+    background-image: url(./images/image-intro-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 452px;
+    @include breakpoint-up(large) {
+      width: 540px;
+      height: 651px;
+      position: absolute;
+      left: 963px;
+      bottom: -148px;
+    }
+  }
+  &__text {
+    position: relative;
+    @include breakpoint-up(large) {
+      margin-left: 377px;
+      text-align: left;
+      padding-top: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+      top: 2px;
+      left: 0;
+      width: 85%;
+      height: 100%;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      @include breakpoint-up(large) {
+        background-image: none;
+        background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+        top: 336px;
+        left: -399px;
+        width: 107%;
+        height: 91%;
+        background-size: 31%;
+        background-repeat: no-repeat;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+      bottom: -347px;
+      right: 2px;
+      width: 33%;
+      height: 100%;
+      background-size: 102%;
+      background-repeat: no-repeat;
+      @include breakpoint-up(large) {
+        background-image: none;
+        background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+        top: -166px;
+        right: -1093px;
+        width: 121%;
+        height: 125%;
+        background-size: 79%;
+        background-repeat: no-repeat;
+      }
+    }
+    padding-top: 100px;
+    padding-bottom: 93px;
+    order: 1;
+    h1 {
+      position: relative;
+      margin-bottom: 17px;
+      @include breakpoint-up(large) {
+        text-align: left;
+        max-width: 486px;
+        &::before {
+          content: "";
+          border-top: 2px solid white;
+          width: 153px;
+          position: absolute;
+          top: -70px;
+        }
+      }
+    }
+    p {
+      color: $Very-Light-Gray;
+      margin-bottom: 33px;
+      @include breakpoint-up(large) {
+        text-align: left;
+        max-width: 542px;
+      }
+    }
+    a {
+      color: white;
+      display: block;
+      border: 2px solid white;
+      max-width: 147px;
+      margin: auto;
+      @include breakpoint-up(large) {
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+}
+.ana {
+  height: 110vh;
+  background-color: white;
+}
