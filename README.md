@@ -11,7 +11,7 @@ Thanks for checking out this front-end coding challenge.
 
 
 
-Check out the website [here](https://rida192.github.io/Insure-landing-page-using-SaaS-and-mobile-first-app/)!
+Check out the website [here](https://rida192.github.io/Insure-landing-page-using-scss-and-mobile-first-approch/)!
 
 
 **To do this challenge, you need a basic understanding of HTML and CSS.**
